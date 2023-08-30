@@ -10,7 +10,9 @@ def main():
     acerto=""
     distancia=0
     menor_dist=float("inf")
+    menor_dist_geral=float("inf")
     nome_menor_dist=""
+    nome_menor_dist_geral=""
     pessoa=input("Diga seu nome: ")
     
 
@@ -27,8 +29,12 @@ def main():
                 if j==0:
                     print(f"Distancia {voice_data_list[i][j]}:")
                 else:
+                    if svt.compute_distance(voice_data_list[i][j], datateste_list[a])<=menor_dist_geral:
+                         nome_menor_dist_geral=voice_data_list[i][0]
                     distancia+=svt.compute_distance(voice_data_list[i][j], datateste_list[a])
+
             distancia=distancia/(len(voice_data_list[i])-1)
+            
             print(distancia)
             if distancia<menor_dist:
                 menor_dist=distancia
@@ -39,7 +45,7 @@ def main():
         else:
                 acerto="nao"
         
-        write_report(f"report/relatorio{a+1}.txt", pessoa, acerto, nome_menor_dist, menor_dist)
+        write_report(f"report/relatorio{a+1}.txt", pessoa, acerto, nome_menor_dist, menor_dist, nome_menor_dist_geral)
 
     datateste_list.clear()
     

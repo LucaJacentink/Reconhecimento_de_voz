@@ -1,0 +1,5 @@
+Nome:Bandeira
+Acertou? nao
+Chute: Betim
+Distancia: 27515.49
+Menor distancia individual: Betim

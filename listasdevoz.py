@@ -71,6 +71,15 @@ data58, sr = librosa.load('luca/voice-luca-12.wav', sr=16000, mono=True)
 data59, sr = librosa.load('luca/voice-luca-13.wav', sr=16000, mono=True)
 data60, sr = librosa.load('luca/voice-luca-14.wav', sr=16000, mono=True)
 
+data61, sr = librosa.load('betim/voice-Betim-0.wav', sr=16000, mono=True)
+data62, sr = librosa.load('betim/voice-Betim-1.wav', sr=16000, mono=True)
+data63, sr = librosa.load('betim/voice-Betim-2.wav', sr=16000, mono=True)
+data64, sr = librosa.load('betim/voice-Betim-3.wav', sr=16000, mono=True)
+data65, sr = librosa.load('betim/voice-Betim-4.wav', sr=16000, mono=True)
+data66, sr = librosa.load('betim/voice-Betim-5.wav', sr=16000, mono=True)
+data67, sr = librosa.load('betim/voice-Betim-6.wav', sr=16000, mono=True)
+
+
 
 
 
@@ -139,6 +148,14 @@ data58 = svt.rms_silence_filter(data58)
 data59 = svt.rms_silence_filter(data59)
 data60 = svt.rms_silence_filter(data60)
 
+data61 = svt.rms_silence_filter(data61)
+data62 = svt.rms_silence_filter(data62)
+data63 = svt.rms_silence_filter(data63)
+data64 = svt.rms_silence_filter(data64)
+data65 = svt.rms_silence_filter(data65)
+data66 = svt.rms_silence_filter(data66)
+data67 = svt.rms_silence_filter(data67)
+
 
 data1 = svt.extract_mfcc(data1)
 data2 = svt.extract_mfcc(data2)
@@ -206,15 +223,23 @@ data59 = svt.extract_mfcc(data59)
 data60 = svt.extract_mfcc(data60)
 
 
+data61 = svt.extract_mfcc(data61)
+data62 = svt.extract_mfcc(data62)
+data63 = svt.extract_mfcc(data63)
+data64 = svt.extract_mfcc(data64)
+data65 = svt.extract_mfcc(data65)
+data66 = svt.extract_mfcc(data66)
+data67 = svt.extract_mfcc(data67)
+
 
 
 voice_data_list_Viktor=["Viktor"]
 voice_data_list_Antonio=["Antonio", data16, data17, data18, data19, data20, data21, data22, data23, data24, data25, data26, data27, data28, data29, data30]
 voice_data_list_Patrick=["Patrick", data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, data12, data13, data14, data15]
 voice_data_list_bandeira=["Bandeira", data31, data32, data33, data34, data35, data36, data37, data38, data39, data40, data41, data42, data43, data44, data45]
-voice_data_list_Betim=["Betim"]
+voice_data_list_Betim=["Betim", data61, data62, data63, data64, data65, data66, data67]
 voice_data_list_Luca=["Luca",data46, data47, data48, data49, data50, data51, data52, data53, data54, data55, data56, data57, data58, data59, data60]
-voice_data_list=[voice_data_list_Antonio,  voice_data_list_Patrick, voice_data_list_bandeira, voice_data_list_Luca]
+voice_data_list=[voice_data_list_Antonio,  voice_data_list_Patrick, voice_data_list_bandeira, voice_data_list_Luca, voice_data_list_Betim]
 datateste_list=[]
 
 
